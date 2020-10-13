@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <input type="checkbox" class="menu_checkbox" id="input_checkbox">
-    <article class="portfolio">
-      <header class="portfolio_header">
-        <label for="input_checkbox" class="label_menu">
-          <span class="portfolio_open_menu">Open menu</span>
-        </label>
-
-        <h1 class="portfolio_heading">Web page</h1>
-
-        <details class="portfolio_menu_navigation" open>
-          <summary class="portfolio_menu_summary">Menu</summary>
-          <ul class="portfolio_list_menu">
-            <li class="portfolio_list_menu_item">
-              <a href="../../blog/about_me/about-me.html" class="portfolio_list_menu_link">About</a>
-            </li>
-
-            <li class="portfolio_list_menu_item">
-              <a href="../../blog/index.html" class="portfolio_list_menu_link">Blog</a>
-            </li>
-
-            <li class="portfolio_list_menu_item">
-              <a href="posts" class="portfolio_list_menu_link">Posts</a>
-            </li>
-
-          </ul>
-        </details>
-      </header>
-
-      <div class="portfolio_container">
-        <ul class="list_post">
-          <li class="list_post_item Photograf">
-            <span class="title">Photograf</span>
-            <a class="website_link" href="../front-end-finals/webroot/index.html">
-              jdfjsjk
-              <!-- <img src="" alt=""> -->
-            </a>
-          </li>
-
-          <li class="list_post_item responsive">
-            <span class="title">New responsive site</span>
-            <a class="website_link" href="../mockups-to-websites/responsive-news-site/webroot/index.html">
-              jdfjsjk
-              <!-- <img src="" alt=""> -->
-            </a>
-
-            <li class="list_post_item game_landing">
-              <span class="title">Game landing</span>
-              <a class="website_link" href="../game-landing-page/webroot/index.html">
-                jdfjsjk
-                <!-- <img src="" alt=""> -->
-              </a>
-            </li>
-          </li>
-        </ul>
-      </div>
-    </article> 
-  </body>
+    <title>lightme-fan - porfolio</title>
+    <style>
+      .container {
+        max-width: 900px;
+        height: 100%;
+        margin: auto;
+        background-color: rgb(228, 225, 225);
+        padding: 2rem;
+        border-radius: 7px;
+      }
+    </style>
+</head>
+<body>
+    <article class="container" id="root"></article>
+    <script src="./script.js"></script>
+</body>
 </html>
