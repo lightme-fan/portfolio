@@ -28304,6 +28304,18 @@ var posts = [{
   title: 'Photograf',
   url: 'https://lightme-fan.github.io/front-end-finals/',
   id: 3
+}, {
+  title: 'Tea Time Topic',
+  url: 'https://affectionate-golick-cab2ba.netlify.app/',
+  id: 4
+}, {
+  title: 'Button Component',
+  url: 'https://zen-hodgkin-014960.netlify.app/',
+  id: 5
+}, {
+  title: 'Button Component',
+  url: 'https://admiring-davinci-f03b4d.netlify.app/',
+  id: 6
 }];
 var _default = posts;
 exports.default = _default;
@@ -28467,7 +28479,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51506" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58620" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
