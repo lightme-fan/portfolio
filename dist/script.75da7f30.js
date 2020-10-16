@@ -28295,7 +28295,8 @@ exports.default = void 0;
 var posts = [{
   title: 'Game Landing',
   url: 'https://lightme-fan.github.io/game-landing-page/',
-  id: 1
+  id: 1,
+  screenshot: ''
 }, {
   title: 'Sports',
   url: 'https://lightme-fan.github.io/front-end-assessment/',
@@ -28316,10 +28317,86 @@ var posts = [{
   title: 'Button Component',
   url: 'https://admiring-davinci-f03b4d.netlify.app/',
   id: 6
+}, {
+  title: 'Team Page',
+  url: 'https://youthful-hawking-4ee062.netlify.app/',
+  id: 7
 }];
 var _default = posts;
 exports.default = _default;
-},{}],"components/Header.js":[function(require,module,exports) {
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28328,25 +28405,28 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+require("./../style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-  var textHeading = {
-    font: 'sans-serif',
-    fontStyle: 'italic',
-    textAlign: 'center'
-  };
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "heading"
   }, /*#__PURE__*/_react.default.createElement("h1", {
-    style: textHeading
-  }, "My web pages"));
+    className: "text-heading"
+  }, "My web pages"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-heading"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "footer-heading-image profile",
+    src: "",
+    alt: "This is my profile"
+  })));
 }
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28355,19 +28435,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+require("./../style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Footer() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "footerContent"
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    className: "footer-heading"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "footer-heading-image profile",
-    src: "",
-    alt: "This is my profile"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "footer-comment"
   }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
@@ -28385,7 +28461,7 @@ function Footer() {
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28401,45 +28477,30 @@ var _Header = _interopRequireDefault(require("./Header"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
+require("./../style.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  var postListStyle = {
-    listStyle: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: 0
-  };
-  var postListLink = {
-    textDecoration: 'none',
-    fontSize: '2rem',
-    width: '30%',
-    height: '40%',
-    backgroundColor: '#ffffff' // paddingTop: '4rem',
-    // paddingBottom: '4rem',
-    // paddingLeft: '1rem',
-    // paddingRight: '1rem',
-
-  };
-
   var postList = _post.default.map(function (post) {
     return /*#__PURE__*/_react.default.createElement("li", {
+      className: "list-post",
       key: post.id,
       id: post.id
     }, /*#__PURE__*/_react.default.createElement("a", {
-      style: postListLink,
+      className: "post-list-link",
       href: post.url
-    }, /*#__PURE__*/_react.default.createElement("span", null, post.title)));
+    }, post.title));
   });
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
-    style: postListStyle
+    className: "post-list"
   }, postList))), /*#__PURE__*/_react.default.createElement(_Footer.default, null));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./post":"components/post.js","./Header":"components/Header.js","./Footer":"components/Footer.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./post":"components/post.js","./Header":"components/Header.js","./Footer":"components/Footer.js","./../style.css":"style.css"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28479,7 +28540,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58620" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65173" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

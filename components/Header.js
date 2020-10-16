@@ -1,15 +1,13 @@
 import React from "react";
+import './../style.css';
 
 function Header() {
-    const textHeading = {
-        font: 'sans-serif',
-        fontStyle: 'italic',
-        textAlign: 'center'
-    }
-
     return (
         <header className="heading">
-            <h1 style={textHeading}>My web pages</h1>
+            <h1 className='text-heading'>My web pages</h1>
+            <div className="footer-heading">
+                <img className="footer-heading-image profile" src="" alt="This is my profile"/>
+            </div>
         </header>
     )
 }

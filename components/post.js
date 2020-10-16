@@ -3,6 +3,7 @@ const posts = [
         title: 'Game Landing',
         url: 'https://lightme-fan.github.io/game-landing-page/',
         id: 1,
+        screenshot: ''
     },
     {
         title: 'Sports',
@@ -31,6 +32,12 @@ const posts = [
         title: 'Button Component',
         url: 'https://admiring-davinci-f03b4d.netlify.app/',
         id: 6,
+    },
+
+    {
+        title: 'Team Page',
+        url: 'https://youthful-hawking-4ee062.netlify.app/',
+        id: 7,
     }
 ]
 
