@@ -28285,46 +28285,83 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/post.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"images/photo1.png":[function(require,module,exports) {
+module.exports = "/photo1.c8fa2220.png";
+},{}],"images/team-photo.png":[function(require,module,exports) {
+module.exports = "/team-photo.8101d17d.png";
+},{}],"images/game.png":[function(require,module,exports) {
+module.exports = "/game.fab6c242.png";
+},{}],"images/input.png":[function(require,module,exports) {
+module.exports = "/input.80a008b0.png";
+},{}],"images/photograf.png":[function(require,module,exports) {
+module.exports = "/photograf.1363b742.png";
+},{}],"images/teaTopic.png":[function(require,module,exports) {
+module.exports = "/teaTopic.847719b2.png";
+},{}],"images/button.png":[function(require,module,exports) {
+module.exports = "/button.0f52227b.png";
+},{}],"components/post.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _photo = _interopRequireDefault(require("./../images/photo1.png"));
+
+var _teamPhoto = _interopRequireDefault(require("./../images/team-photo.png"));
+
+var _game = _interopRequireDefault(require("./../images/game.png"));
+
+var _input = _interopRequireDefault(require("./../images/input.png"));
+
+var _photograf = _interopRequireDefault(require("./../images/photograf.png"));
+
+var _teaTopic = _interopRequireDefault(require("./../images/teaTopic.png"));
+
+var _button = _interopRequireDefault(require("./../images/button.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var posts = [{
   title: 'Game Landing',
   url: 'https://lightme-fan.github.io/game-landing-page/',
   id: 1,
-  screenshot: ''
+  screenshot: _game.default
 }, {
   title: 'Sports',
   url: 'https://lightme-fan.github.io/front-end-assessment/',
-  id: 2
+  id: 2,
+  screenshot: _photo.default
 }, {
   title: 'Photograf',
   url: 'https://lightme-fan.github.io/front-end-finals/',
-  id: 3
+  id: 3,
+  screenshot: _photograf.default
 }, {
   title: 'Tea Time Topic',
   url: 'https://affectionate-golick-cab2ba.netlify.app/',
-  id: 4
+  id: 4,
+  screenshot: _teaTopic.default
 }, {
   title: 'Button Component',
   url: 'https://zen-hodgkin-014960.netlify.app/',
-  id: 5
+  id: 5,
+  screenshot: _button.default
 }, {
-  title: 'Button Component',
+  title: 'Input Component',
   url: 'https://admiring-davinci-f03b4d.netlify.app/',
-  id: 6
+  id: 6,
+  screenshot: _input.default
 }, {
   title: 'Team Page',
   url: 'https://youthful-hawking-4ee062.netlify.app/',
-  id: 7
+  id: 7,
+  screenshot: _teamPhoto.default
 }];
 var _default = posts;
 exports.default = _default;
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./../images/photo1.png":"images/photo1.png","./../images/team-photo.png":"images/team-photo.png","./../images/game.png":"images/game.png","./../images/input.png":"images/input.png","./../images/photograf.png":"images/photograf.png","./../images/teaTopic.png":"images/teaTopic.png","./../images/button.png":"images/button.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28396,7 +28433,9 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/Header.js":[function(require,module,exports) {
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/fan.JPG":[function(require,module,exports) {
+module.exports = "/fan.61b9e1b8.JPG";
+},{}],"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28408,6 +28447,8 @@ var _react = _interopRequireDefault(require("react"));
 
 require("./../style.css");
 
+var _fan = _interopRequireDefault(require("./../images/fan.JPG"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
@@ -28416,17 +28457,17 @@ function Header() {
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-heading"
   }, "My web pages"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "footer-heading"
+    className: "heading-profile"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "footer-heading-image profile",
-    src: "",
+    className: "heading-image profile",
+    src: _fan.default,
     alt: "This is my profile"
   })));
 }
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/Footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../style.css":"style.css","./../images/fan.JPG":"images/fan.JPG"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28445,17 +28486,17 @@ function Footer() {
     className: "footerContent"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "footer-comment"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    className: "footer-comment-input"
-  }), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Write your comment or suggestion!"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("textarea", {
+    id: "comment",
+    className: "footer-comment-textarea row=5"
+  }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
     type: "button",
-    className: "footer-comment-button"
+    className: "button footer-comment-button"
   }, "Comment")), /*#__PURE__*/_react.default.createElement("div", {
     className: "footer-subscribe"
   }, /*#__PURE__*/_react.default.createElement("button", {
     type: "button",
-    className: "footer-subscribe-button"
+    className: "button footer-subscribe-button"
   }, "Subscribe")));
 }
 
@@ -28490,7 +28531,10 @@ function App() {
     }, /*#__PURE__*/_react.default.createElement("a", {
       className: "post-list-link",
       href: post.url
-    }, post.title));
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: post.screenshot,
+      alt: post.title
+    })));
   });
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
@@ -28540,7 +28584,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65173" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62458" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

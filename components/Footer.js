@@ -5,12 +5,13 @@ function Footer() {
     return (
         <div className="footerContent">
             <div className="footer-comment">
-                <input type="text" className="footer-comment-input" />
-                <button type="button" className="footer-comment-button">Comment</button>
+                <label>Write your comment or suggestion!</label><br />
+                <textarea id='comment' className="footer-comment-textarea row=5" /><br />
+                <button type="button" className="button footer-comment-button">Comment</button>
             </div>
 
             <div className="footer-subscribe">
-                <button type="button" className="footer-subscribe-button">Subscribe</button>
+                <button type="button" className="button footer-subscribe-button">Subscribe</button>
             </div>
         </div>
     )
