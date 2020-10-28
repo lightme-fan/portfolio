@@ -45,13 +45,19 @@
 .post-list-link > img {
     width: 100%;
     border-radius: 7px;
-    height: 270px;
+    height: 100%;
+    box-shadow: 3px 5px 8px -2px #000000;
 }
 
-.footerContent {
-    display: flex;
-    justify-content: space-between;
+.post-list-link > img:hover {
+    transform:rotate(9deg) scale(1.051) skew(-177deg) translate(1px) ;
 }
+
+/* .footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
 
 textarea {
     width: 217px;
@@ -94,6 +100,20 @@ textarea {
     .list-post {
         flex-basis: 40%;
     }
+
+    .post-list-link > img {
+        height: 269px;
+    }
+
+    .footerContent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .post-list-link > img:hover {
+        transform:rotate(9deg) scale(1.051) skew(-177deg) translate(1px) ;
+    }
+    
 }
 
 @media (min-width: 700px) {
@@ -106,4 +126,18 @@ textarea {
     .list-post {
         flex-basis: 30%;
     }
+
+    .post-list-link > img {
+        height: 350px;
+    }
+
+    .post-list-link > img:hover {
+        transform:rotate(9deg) scale(1.051) skew(-177deg) translate(1px) ;
+    }
+
+    .footerContent {
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
