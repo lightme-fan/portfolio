@@ -59,9 +59,9 @@
     justify-content: space-between;
 } */
 
-textarea {
-    width: 217px;
-    height: 50px;
+.footer-comment-input {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .button {
@@ -88,6 +88,8 @@ textarea {
     padding-right: 3rem;
     background-color: rgb(211, 6, 6);
     color: #ffffff;
+    width: 100%;
+    margin-top: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -112,6 +114,10 @@ textarea {
 
     .post-list-link > img:hover {
         transform:rotate(9deg) scale(1.051) skew(-177deg) translate(1px) ;
+    }
+
+    .footer-subscribe-button {
+        margin-top: 0;
     }
     
 }
@@ -138,6 +144,10 @@ textarea {
     .footerContent {
         display: flex;
         justify-content: space-between;
+    }
+
+    .footer-subscribe-button {
+        margin-top: 0;
     }
     
 }

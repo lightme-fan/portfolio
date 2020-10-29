@@ -1,19 +1,26 @@
 import React from 'react'
 import './../style.css'
 
-function Footer() {
+function Footer(props) {
     return (
-        <div className="footerContent">
-            <div className="footer-comment">
-                <label>Write your comment or suggestion!</label><br />
-                <textarea id='comment' className="footer-comment-textarea row=5" /><br />
-                <button type="button" className="button footer-comment-button">Comment</button>
+        <>
+            <div className="footerContent">
+                <form className="footer-comment" onSubmit={props.onSubmit}>
+                    <label>Write your comment or suggestion!</label><br />
+                    <input type='text' id='comment'value={props.value} className="footer-comment-input" name='comment' onChange={props.onChange} /><br />
+                    <button type="Submit" className="button footer-comment-button">Comment</button><br/>
+                    
+                </form>
+
+                <div className="footer-subscribe">
+                    <button type="button" className="button footer-subscribe-button">Subscribe</button>
+                </div>
             </div>
 
-            <div className="footer-subscribe">
-                <button type="button" className="button footer-subscribe-button">Subscribe</button>
+            <div>
+                {props.text}
             </div>
-        </div>
+        </>
     )
 }
 

@@ -28481,28 +28481,33 @@ require("./../style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Footer() {
-  return /*#__PURE__*/_react.default.createElement("div", {
+function Footer(props) {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "footerContent"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "footer-comment"
-  }, /*#__PURE__*/_react.default.createElement("label", null, "Write your comment or suggestion!"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("textarea", {
+  }, /*#__PURE__*/_react.default.createElement("form", {
+    className: "footer-comment",
+    onSubmit: props.onSubmit
+  }, /*#__PURE__*/_react.default.createElement("label", null, "Write your comment or suggestion!"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
     id: "comment",
-    className: "footer-comment-textarea row=5"
+    value: props.value,
+    className: "footer-comment-input",
+    name: "comment",
+    onChange: props.onChange
   }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
-    type: "button",
+    type: "Submit",
     className: "button footer-comment-button"
-  }, "Comment")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Comment"), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
     className: "footer-subscribe"
   }, /*#__PURE__*/_react.default.createElement("button", {
     type: "button",
     className: "button footer-subscribe-button"
-  }, "Subscribe")));
+  }, "Subscribe"))), /*#__PURE__*/_react.default.createElement("div", null, props.text));
 }
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/DisplayList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28512,39 +28517,96 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function DisplayList(props) {
+  return /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-post",
+    id: props.id
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "post-list-link",
+    href: props.url
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: props.screenshot,
+    alt: props.title
+  })));
+}
+
+var _default = DisplayList;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
 var _post = _interopRequireDefault(require("./post"));
 
 var _Header = _interopRequireDefault(require("./Header"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
+var _DisplayList = _interopRequireDefault(require("./DisplayList"));
+
 require("./../style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function App() {
-  var postList = _post.default.map(function (post) {
-    return /*#__PURE__*/_react.default.createElement("li", {
-      className: "list-post",
-      key: post.id,
-      id: post.id
-    }, /*#__PURE__*/_react.default.createElement("a", {
-      className: "post-list-link",
-      href: post.url
-    }, /*#__PURE__*/_react.default.createElement("img", {
-      src: post.screenshot,
-      alt: post.title
-    })));
-  });
+  var _useState = (0, _react.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      comment = _useState2[0],
+      setComment = _useState2[1];
+
+  function handleChange(e) {
+    console.log(e.target.value);
+    setComment(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.reset();
+  }
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
     className: "post-list"
-  }, postList))), /*#__PURE__*/_react.default.createElement(_Footer.default, null));
+  }, _post.default.map(function (post) {
+    return /*#__PURE__*/_react.default.createElement(_DisplayList.default, _extends({
+      key: post.id
+    }, post));
+  })))), /*#__PURE__*/_react.default.createElement(_Footer.default // value={comment}
+  , {
+    onSubmit: handleSubmit,
+    onChange: handleChange,
+    text: comment && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, comment), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", null, "\uD83D\uDC4D"), /*#__PURE__*/_react.default.createElement("button", null, "\uD83D\uDC4E")))
+  }));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./post":"components/post.js","./Header":"components/Header.js","./Footer":"components/Footer.js","./../style.css":"style.css"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./post":"components/post.js","./Header":"components/Header.js","./Footer":"components/Footer.js","./DisplayList":"components/DisplayList.js","./../style.css":"style.css"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28584,7 +28646,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53185" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61882" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
