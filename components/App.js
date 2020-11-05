@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import posts from './post'
 import Header from './Header'
 import Footer from './Footer'
 import DisplayList from './DisplayList'
-import './../style.css'
+// import './../style.css'
 
 function App() {
     const [comment, setComment ] = useState('')
@@ -19,14 +18,12 @@ function App() {
     }
 
     return (
-        <div>
+        <article>
             <Header />
             <main>
                 <nav>
                     <ul className='post-list'>
-                        {
-                            posts.map(post => <DisplayList key={post.id} {...post} />)
-                        }
+                        <DisplayList />      
                     </ul>
                 </nav>
             </main>
@@ -44,7 +41,7 @@ function App() {
                     </>
                 }
             />
-        </div>
+        </article>
     )
 }
 

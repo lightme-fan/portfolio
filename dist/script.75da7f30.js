@@ -28285,83 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"images/photo1.png":[function(require,module,exports) {
-module.exports = "/photo1.c8fa2220.png";
-},{}],"images/team-photo.png":[function(require,module,exports) {
-module.exports = "/team-photo.8101d17d.png";
-},{}],"images/game.png":[function(require,module,exports) {
-module.exports = "/game.fab6c242.png";
-},{}],"images/input.png":[function(require,module,exports) {
-module.exports = "/input.80a008b0.png";
-},{}],"images/photograf.png":[function(require,module,exports) {
-module.exports = "/photograf.1363b742.png";
-},{}],"images/teaTopic.png":[function(require,module,exports) {
-module.exports = "/teaTopic.847719b2.png";
-},{}],"images/button.png":[function(require,module,exports) {
-module.exports = "/button.0f52227b.png";
-},{}],"components/post.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _photo = _interopRequireDefault(require("./../images/photo1.png"));
-
-var _teamPhoto = _interopRequireDefault(require("./../images/team-photo.png"));
-
-var _game = _interopRequireDefault(require("./../images/game.png"));
-
-var _input = _interopRequireDefault(require("./../images/input.png"));
-
-var _photograf = _interopRequireDefault(require("./../images/photograf.png"));
-
-var _teaTopic = _interopRequireDefault(require("./../images/teaTopic.png"));
-
-var _button = _interopRequireDefault(require("./../images/button.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var posts = [{
-  title: 'Game Landing',
-  url: 'https://lightme-fan.github.io/game-landing-page/',
-  id: 1,
-  screenshot: _game.default
-}, {
-  title: 'Sports',
-  url: 'https://lightme-fan.github.io/front-end-assessment/',
-  id: 2,
-  screenshot: _photo.default
-}, {
-  title: 'Photograf',
-  url: 'https://lightme-fan.github.io/front-end-finals/',
-  id: 3,
-  screenshot: _photograf.default
-}, {
-  title: 'Tea Time Topic',
-  url: 'https://affectionate-golick-cab2ba.netlify.app/',
-  id: 4,
-  screenshot: _teaTopic.default
-}, {
-  title: 'Button Component',
-  url: 'https://zen-hodgkin-014960.netlify.app/',
-  id: 5,
-  screenshot: _button.default
-}, {
-  title: 'Input Component',
-  url: 'https://admiring-davinci-f03b4d.netlify.app/',
-  id: 6,
-  screenshot: _input.default
-}, {
-  title: 'Team Page',
-  url: 'https://youthful-hawking-4ee062.netlify.app/',
-  id: 7,
-  screenshot: _teamPhoto.default
-}];
-var _default = posts;
-exports.default = _default;
-},{"./../images/photo1.png":"images/photo1.png","./../images/team-photo.png":"images/team-photo.png","./../images/game.png":"images/game.png","./../images/input.png":"images/input.png","./../images/photograf.png":"images/photograf.png","./../images/teaTopic.png":"images/teaTopic.png","./../images/button.png":"images/button.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28454,9 +28378,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Header() {
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "heading"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    for: "input_checkbox",
+    class: "label_menu"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    class: "open_menu"
+  }, "Open menu")), /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-heading"
-  }, "My web pages"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "My web pages"), /*#__PURE__*/_react.default.createElement("ul", {
+    className: "list-menu"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-menu--item"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    a: true,
+    className: "list-menu--link",
+    href: "/"
+  }, "Blog")), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-menu--item"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "list-menu--link",
+    href: "/"
+  }, "Portfolio")), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-menu--item"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "list-menu--link",
+    href: "/"
+  }, "About"))), /*#__PURE__*/_react.default.createElement("div", {
     className: "heading-profile"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: "heading-image profile",
@@ -28507,7 +28454,83 @@ function Footer(props) {
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"components/DisplayList.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../style.css":"style.css"}],"images/photo1.png":[function(require,module,exports) {
+module.exports = "/photo1.c8fa2220.png";
+},{}],"images/team-photo.png":[function(require,module,exports) {
+module.exports = "/team-photo.8101d17d.png";
+},{}],"images/game.png":[function(require,module,exports) {
+module.exports = "/game.fab6c242.png";
+},{}],"images/input.png":[function(require,module,exports) {
+module.exports = "/input.80a008b0.png";
+},{}],"images/photograf.png":[function(require,module,exports) {
+module.exports = "/photograf.1363b742.png";
+},{}],"images/teaTopic.png":[function(require,module,exports) {
+module.exports = "/teaTopic.847719b2.png";
+},{}],"images/button.png":[function(require,module,exports) {
+module.exports = "/button.0f52227b.png";
+},{}],"components/post.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _photo = _interopRequireDefault(require("./../images/photo1.png"));
+
+var _teamPhoto = _interopRequireDefault(require("./../images/team-photo.png"));
+
+var _game = _interopRequireDefault(require("./../images/game.png"));
+
+var _input = _interopRequireDefault(require("./../images/input.png"));
+
+var _photograf = _interopRequireDefault(require("./../images/photograf.png"));
+
+var _teaTopic = _interopRequireDefault(require("./../images/teaTopic.png"));
+
+var _button = _interopRequireDefault(require("./../images/button.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var posts = [{
+  title: 'Game Landing',
+  url: 'https://lightme-fan.github.io/game-landing-page/',
+  id: 1,
+  screenshot: _game.default
+}, {
+  title: 'Sports',
+  url: 'https://lightme-fan.github.io/front-end-assessment/',
+  id: 2,
+  screenshot: _photo.default
+}, {
+  title: 'Photograf',
+  url: 'https://lightme-fan.github.io/front-end-finals/',
+  id: 3,
+  screenshot: _photograf.default
+}, {
+  title: 'Tea Time Topic',
+  url: 'https://affectionate-golick-cab2ba.netlify.app/',
+  id: 4,
+  screenshot: _teaTopic.default
+}, {
+  title: 'Button Component',
+  url: 'https://zen-hodgkin-014960.netlify.app/',
+  id: 5,
+  screenshot: _button.default
+}, {
+  title: 'Input Component',
+  url: 'https://admiring-davinci-f03b4d.netlify.app/',
+  id: 6,
+  screenshot: _input.default
+}, {
+  title: 'Team Page',
+  url: 'https://youthful-hawking-4ee062.netlify.app/',
+  id: 7,
+  screenshot: _teamPhoto.default
+}];
+var _default = posts;
+exports.default = _default;
+},{"./../images/photo1.png":"images/photo1.png","./../images/team-photo.png":"images/team-photo.png","./../images/game.png":"images/game.png","./../images/input.png":"images/input.png","./../images/photograf.png":"images/photograf.png","./../images/teaTopic.png":"images/teaTopic.png","./../images/button.png":"images/button.png"}],"components/DisplayList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28517,24 +28540,29 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _post = _interopRequireDefault(require("./post"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function DisplayList(props) {
-  return /*#__PURE__*/_react.default.createElement("li", {
-    className: "list-post",
-    id: props.id
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    className: "post-list-link",
-    href: props.url
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: props.screenshot,
-    alt: props.title
-  })));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _post.default.map(function (post) {
+    return /*#__PURE__*/_react.default.createElement("li", {
+      className: "list-post",
+      key: post.id,
+      id: post.id
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      className: "post-list-link",
+      href: post.url
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: post.screenshot,
+      alt: post.title
+    })));
+  }));
 }
 
 var _default = DisplayList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./post":"components/post.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28544,23 +28572,17 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _post = _interopRequireDefault(require("./post"));
-
 var _Header = _interopRequireDefault(require("./Header"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
 var _DisplayList = _interopRequireDefault(require("./DisplayList"));
 
-require("./../style.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -28574,6 +28596,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+// import './../style.css'
 function App() {
   var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -28590,13 +28613,9 @@ function App() {
     e.target.reset();
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
     className: "post-list"
-  }, _post.default.map(function (post) {
-    return /*#__PURE__*/_react.default.createElement(_DisplayList.default, _extends({
-      key: post.id
-    }, post));
-  })))), /*#__PURE__*/_react.default.createElement(_Footer.default // value={comment}
+  }, /*#__PURE__*/_react.default.createElement(_DisplayList.default, null)))), /*#__PURE__*/_react.default.createElement(_Footer.default // value={comment}
   , {
     onSubmit: handleSubmit,
     onChange: handleChange,
@@ -28606,7 +28625,7 @@ function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./post":"components/post.js","./Header":"components/Header.js","./Footer":"components/Footer.js","./DisplayList":"components/DisplayList.js","./../style.css":"style.css"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Header":"components/Header.js","./Footer":"components/Footer.js","./DisplayList":"components/DisplayList.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28646,7 +28665,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50392" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60948" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,12 +1,17 @@
 import React from 'react'
+import posts from './post'
 
 function DisplayList(props) {
-    return (         
-        <li className='list-post'id={props.id}>
-            <a className='post-list-link' href={props.url}>
-                <img src={props.screenshot} alt={props.title} />
-            </a>  
-        </li>        
+    return (
+        <>
+            {posts.map(post => 
+                <li className='list-post'key={post.id} id={post.id}>
+                    <a className='post-list-link' href={post.url}>
+                        <img src={post.screenshot} alt={post.title} />
+                    </a>  
+                </li>
+            )}
+        </>
     )
 }
 

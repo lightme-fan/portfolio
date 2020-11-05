@@ -9,6 +9,36 @@
     margin: 0;
 }
 
+.list-menu {
+    list-style: none;
+}
+
+.menu_checkbox {
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked ~ .heading .list-menu {
+    transform: translateX(0%);
+}
+
+input[type="checkbox"]:checked ~ .list-menu {
+    z-index: 1;
+}
+
+input[type="checkbox"]:checked ~ .headeing .list-menu {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  height: 945px;
+  margin: 0;
+}
+
+/* .list-menu--link {
+    
+} */
+
 .profile {
     width: 36px;
     height: 36px;
