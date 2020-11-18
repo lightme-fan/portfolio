@@ -5,18 +5,16 @@ import fan from './../images/fan.JPG'
 function Header() {
     return (
         <header className="heading">
-            <label for="input_checkbox" class="label_menu">
-                <span class="open_menu">Open menu</span>
+            <input type='checkbox' id='inputCheckbox' className='checkbox'/>
+            <label htmlFor="inputCheckbox" className="label_menu">
+                Menu
             </label>
-            <h1 className='text-heading'>My web pages</h1>
+            <h1 className='text-heading'>Portfolio</h1>
             <ul className='list-menu'>
-                <li className='list-menu--item'><a a className='list-menu--link' href='/'>Blog</a></li>
-                <li className='list-menu--item'><a className='list-menu--link' href='/'>Portfolio</a></li>
-                <li className='list-menu--item'><a className='list-menu--link' href='/'>About</a></li>
+                <li className='list-menu--item'><a className='list-menu--link' href='/about'>About</a></li>
+                <li className='list-menu--item'><a className='list-menu--link' href='/blog'>Blog</a></li>
+                <li className='list-menu--item'><a className='list-menu--link' href='/portfolio'>Portfolio</a></li>
             </ul>
-            <div className="heading-profile">
-                <img className="heading-image profile" src={fan} alt="This is my profile"/>
-            </div>
         </header>
     )
 }

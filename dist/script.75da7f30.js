@@ -28357,7 +28357,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/fan.JPG":[function(require,module,exports) {
+},{"./svg\\menu_icon.svg":[["menu_icon.37c2966b.svg","svg/menu_icon.svg"],"svg/menu_icon.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/fan.JPG":[function(require,module,exports) {
 module.exports = "/fan.61b9e1b8.JPG";
 },{}],"components/Header.js":[function(require,module,exports) {
 "use strict";
@@ -28378,38 +28378,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Header() {
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "heading"
-  }, /*#__PURE__*/_react.default.createElement("label", {
-    for: "input_checkbox",
-    class: "label_menu"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    class: "open_menu"
-  }, "Open menu")), /*#__PURE__*/_react.default.createElement("h1", {
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "checkbox",
+    id: "inputCheckbox",
+    className: "checkbox"
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "inputCheckbox",
+    className: "label_menu"
+  }, "Menu"), /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-heading"
-  }, "My web pages"), /*#__PURE__*/_react.default.createElement("ul", {
+  }, "Portfolio"), /*#__PURE__*/_react.default.createElement("ul", {
     className: "list-menu"
   }, /*#__PURE__*/_react.default.createElement("li", {
     className: "list-menu--item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    a: true,
     className: "list-menu--link",
-    href: "/"
+    href: "/about"
+  }, "About")), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-menu--item"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "list-menu--link",
+    href: "/blog"
   }, "Blog")), /*#__PURE__*/_react.default.createElement("li", {
     className: "list-menu--item"
   }, /*#__PURE__*/_react.default.createElement("a", {
     className: "list-menu--link",
-    href: "/"
-  }, "Portfolio")), /*#__PURE__*/_react.default.createElement("li", {
-    className: "list-menu--item"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    className: "list-menu--link",
-    href: "/"
-  }, "About"))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "heading-profile"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "heading-image profile",
-    src: _fan.default,
-    alt: "This is my profile"
-  })));
+    href: "/portfolio"
+  }, "Portfolio"))));
 }
 
 var _default = Header;
@@ -28665,7 +28660,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60948" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50381" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
