@@ -28398,7 +28398,12 @@ function Header() {
     className: "list-menu--item"
   }, /*#__PURE__*/_react.default.createElement("a", {
     className: "list-menu--link",
-    href: "/blog"
+    href: "https://lightme-fan.github.io/blog/about_me/about-me.html"
+  }, "About")), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list-menu--item"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "list-menu--link",
+    href: "https://lightme-fan.github.io/blog/"
   }, "Blog")), /*#__PURE__*/_react.default.createElement("li", {
     className: "list-menu--item"
   }, /*#__PURE__*/_react.default.createElement("a", {
@@ -28660,7 +28665,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50381" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61499" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
