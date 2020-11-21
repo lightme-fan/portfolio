@@ -28468,6 +28468,8 @@ module.exports = "/photograf.1363b742.png";
 module.exports = "/teaTopic.847719b2.png";
 },{}],"images/button.png":[function(require,module,exports) {
 module.exports = "/button.0f52227b.png";
+},{}],"images/hit-parade.png":[function(require,module,exports) {
+module.exports = "/hit-parade.f555275c.png";
 },{}],"components/post.js":[function(require,module,exports) {
 "use strict";
 
@@ -28489,6 +28491,8 @@ var _photograf = _interopRequireDefault(require("./../images/photograf.png"));
 var _teaTopic = _interopRequireDefault(require("./../images/teaTopic.png"));
 
 var _button = _interopRequireDefault(require("./../images/button.png"));
+
+var _hitParade = _interopRequireDefault(require("./../images/hit-parade.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28527,10 +28531,15 @@ var posts = [{
   url: 'https://youthful-hawking-4ee062.netlify.app/',
   id: 7,
   screenshot: _teamPhoto.default
+}, {
+  title: 'Hit parade',
+  url: 'https://lightme-fan-hit-parade.netlify.app/',
+  id: 10,
+  screenshot: _hitParade.default
 }];
 var _default = posts;
 exports.default = _default;
-},{"./../images/photo1.png":"images/photo1.png","./../images/team-photo.png":"images/team-photo.png","./../images/game.png":"images/game.png","./../images/input.png":"images/input.png","./../images/photograf.png":"images/photograf.png","./../images/teaTopic.png":"images/teaTopic.png","./../images/button.png":"images/button.png"}],"components/DisplayList.js":[function(require,module,exports) {
+},{"./../images/photo1.png":"images/photo1.png","./../images/team-photo.png":"images/team-photo.png","./../images/game.png":"images/game.png","./../images/input.png":"images/input.png","./../images/photograf.png":"images/photograf.png","./../images/teaTopic.png":"images/teaTopic.png","./../images/button.png":"images/button.png","./../images/hit-parade.png":"images/hit-parade.png"}],"components/DisplayList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28665,7 +28674,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61499" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57647" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

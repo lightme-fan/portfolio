@@ -5,6 +5,7 @@ import input from './../images/input.png'
 import photograf from './../images/photograf.png'
 import teaTopic from './../images/teaTopic.png'
 import button from './../images/button.png'
+import hitParade from './../images/hit-parade.png'
 
 const posts = [
     {
@@ -52,6 +53,12 @@ const posts = [
         url: 'https://youthful-hawking-4ee062.netlify.app/',
         id: 7,
         screenshot: teamPhoto,
+    },
+    {
+        title: 'Hit parade',
+        url: 'https://lightme-fan-hit-parade.netlify.app/',
+        id: 10,
+        screenshot: hitParade,
     }
 ]
 
